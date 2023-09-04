@@ -10,7 +10,7 @@ function InputURL() {
   const handleConvert = async () => {
     if (url === '') return failed()
     try {
-      const response = await fetch('http://localhost:4000/api/v1/converters', {
+      const response = await fetch('https://videotoaudio-e0kj.onrender.com/api/v1/converters', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
