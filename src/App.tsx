@@ -1,8 +1,10 @@
 import InputURL from "./components/InputURL"
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
-    <div className='App flex justify-center items-center h-[100vh]'>
+    <div className='App flex'>
       <InputURL />
+      <ToastContainer />
     </div>
   )
 }

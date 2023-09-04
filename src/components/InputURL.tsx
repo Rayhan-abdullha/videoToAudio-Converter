@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
+import Download from './Download';
 
 function InputURL() {
   const [url, setUrl] = useState('')
@@ -25,14 +26,15 @@ function InputURL() {
     } catch (error: any) {
       errorMessage(error.message);
     }
+
   }
+
   return (
     <React.Fragment>
       <div className="urlInput sm:flex">
-        <input onChange={(e) => setUrl(e.target.value)} type="text" placeholder="Youtube URL" className=" input input-bordered input-accent w-full max-w-xs" value={url} />
-
-        <button onClick={handleConvert} className="sm:relative sm:left-[-20px] btn btn-accent w-full sm:w-[100px] mt-2 sm:mt-0">succ</button>
-        <ToastContainer />
+        <input onChange={(e) => setUrl(e.target.value)} type="text" placeholder="Youtube URL to Audio" className=" input input-bordered input-accent w-full max-w-xs" value={url} />
+        <button onClick={handleConvert} className="sm:relative sm:left-[-20px] btn btn-accent w-full sm:w-[100px] mt-2 sm:mt-0">Convert</button>
+        <Download />
       </div>
     </React.Fragment>
   )
