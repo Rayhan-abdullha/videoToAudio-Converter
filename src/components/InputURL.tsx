@@ -20,6 +20,7 @@ function InputURL() {
 
       if (response.ok) {
         success()
+        setUrl('')
       } else {
         failed();
       }
