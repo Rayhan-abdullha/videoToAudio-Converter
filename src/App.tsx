@@ -1,5 +1,6 @@
 import InputURL from "./components/InputURL"
 import { ToastContainer } from 'react-toastify';
+import Loading from "./components/Loading";
 function App() {
   return (
     <div className='App flex'>
